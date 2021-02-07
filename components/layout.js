@@ -1,9 +1,14 @@
 import React from "react";
 import Navbar from "./navbar";
+import Head from 'next/head';
 
 export default function Layout({ children }) {
   return (
     <div>
+         <Head>
+        <title>Layout with Next.js</title>
+        <meta name="description" content="next course" />
+      </Head> 
       <Navbar />
       <main>{children}</main>
       <style jsx>
