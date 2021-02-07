@@ -8,6 +8,7 @@ export default function Users({ users }) {
   console.log(users)
   return (
     <Layout>
+      
       <Title>Users Page</Title>
       <div className="grid">
         {users.map((user) => {

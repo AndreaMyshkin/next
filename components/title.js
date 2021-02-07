@@ -5,6 +5,7 @@ export default function Title({ children }) {
       <style jsx>
         {`
           h1 {
+            color:purple;
             margin: 0;
             font-size: 3rem;
             text-align: center;

@@ -11,6 +11,7 @@ export default function id({ user }) {
 
   return (
     <Layout>
+
       <div className="card">
         <Title>User Id :{user.id}</Title>
 

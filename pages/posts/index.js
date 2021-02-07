@@ -2,9 +2,8 @@ import Layout from "../../components/layout";
 import Title from "../../components/title";
 import Link from "next/link";
 
-export default function Posts({posts}) {
-
-    //Client side rendering
+export default function Posts({ posts }) {
+  //Client side rendering
   /*const [posts, setPosts] = React.useState([]);
 
   React.useEffect(() => {
@@ -18,12 +17,13 @@ export default function Posts({posts}) {
 
   return (
     <Layout>
+     
       <Title>Post Page</Title>
-      <div className='grid'>
+      <div className="grid">
         {posts.map((post) => {
           return (
             <Link href={`/posts/[id]`} as={`/posts/${post.id}`} key={post.id}>
-              <a className='card'>
+              <a className="card">
                 <h3>{post.title}</h3>
                 <p>{post.body}</p>
               </a>
@@ -72,13 +72,13 @@ export default function Posts({posts}) {
 
 //Server Side Rendering
 
-export async function getServerSideProps(){
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts")
-  const posts = await res.json()
+export async function getServerSideProps() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const posts = await res.json();
 
   return {
-      props:{
-          posts
-      }
-  }
+    props: {
+      posts,
+    },
+  };
 }
